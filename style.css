@@ -1,0 +1,140 @@
+body{
+    background-color: black;
+    color: white;
+}
+.container{
+    display: flex;
+    flex-direction: column;
+}
+textarea{
+    background-color: black;
+    color: white;
+    border: none;
+    resize: none;
+    font-size: large;
+}
+
+.convertBtn{
+    background: gray;
+    border: none;
+}
+h1{
+    color: gray;
+}
+.keyboard-container{
+/*     border: 10px solid rgb(45, 45, 45);
+ */    
+    border-radius: 5px; 
+    display: grid;
+    grid: repeat(4,50px)/repeat(4,50px);
+    
+    /* position: absolute; */
+    
+
+    
+}
+.keyboard-container button{
+    border-radius: 5px;
+}
+.head-container{
+    background-color: rgb(45, 45, 45);
+    width: 200px;
+    position: absolute;
+    left: 50%;
+   transform: translate(-50%);
+}
+/* .bottom{
+    bottom: 10%;
+} */
+.close-div{
+    user-select: none;
+}
+.close-div:hover, .ar-close-div:hover{
+    cursor: move;
+}
+.textarea-wrapper{
+    display: flex;
+    flex-direction: column;
+    border: thin solid gray;
+    position: relative;
+}
+.virtual-keyboard{
+    background: none;
+    border: none;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    font-size: large;
+    user-select: none;
+    color: gray;
+}
+.ar-virtual-keyboard{
+    background: none;
+    border: none;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    user-select: none;
+    color: gray;
+    
+}
+.displaynone{
+    display: none;
+}
+.cursor-pointer{
+    cursor: pointer;
+}
+.ar-keyboard-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    row-gap: 6px;
+    
+}
+.ar-head-container{
+    width: 448px;
+    border: thin solid gray;
+   position: absolute;
+   right: 50%;
+   transform: translate(50%);
+}
+.ar-forth-row button{
+    width: 200px;
+    height: 30px;
+}
+
+.ar-close-div{
+    display: flex;
+    justify-content: flex-end;
+}
+.space-btn{
+    grid-column-start:1 ;
+    grid-column-end: 4;
+}
+.ar-keyboardBtn{
+    font-size: x-large;
+}
+.shad::after, .skon::after, .dam::after, .ksr-n::after, .ksr::after, .fath-n::after, .fath::after, .quran-a::after{
+    content: "…";
+}
+.ar-shiftBtn{
+    width: 45px;
+    height: 35px;
+}
+.ar-third-row, .ar-first-row{
+    display: flex;
+    align-items: center;
+    gap: 4px;
+}
+
+
+.fortyfour-thirtyseven-round{
+    width: 44px;
+    height: 37px;
+    background-color: rgb(186, 186, 186);
+}
+.thirty-px{
+    width: 30px;
+    height: 37px;
+}

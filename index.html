@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reduced Alphabet</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="main.js" defer></script>
+</head>
+<body>
+    <main class="container">
+        <h1>Reduced Alphabet</h1>
+        <div class="textarea-wrapper">
+            <textarea  name="" id="textToReduce" rows="20"></textarea>
+            <div class="virtual-keyboard">
+                <button id="virtual-keyboard">⌨️</button>
+                <button id="ltr-btn">LTR</button>
+            </div>
+            <div class="ar-virtual-keyboard">
+                <button id="rtl-btn">RTL</button>
+                <button id="ar-virtual-keyboard">⌨️</button>
+            </div>
+        </div>
+        <button class="convertBtn" id="convertBtn">Convert</button>
+        <output id="reducedOutput"></output>
+    </main>
+   <div id="head-container" class="head-container">
+      <div id="close-div" class="close-div"><span class="cursor-pointer" id="x-virtualkeyboard">X</span></div>
+      <div class="keyboard-container">
+          <!-- <button>`</button>
+          <button>1</button>
+          <button>2</button>
+          <button>3</button>
+          <button>4</button>
+          <button>5</button>
+          <button>6</button>
+          <button>7</button>
+          <button>8</button>
+          <button>9</button>
+          <button>0</button>
+          <button>-</button>
+          <button>=</button>
+          <button>␡</button> -->
+          <button  class="keyboardBtn i">y</button>
+          <button  class="keyboardBtn z">r</button>
+          <button class="keyboardBtn">t</button>
+          <button  class="keyboardBtn w-u">o</button>
+          <button  class="keyboardBtn e">a</button>
+          <button class="keyboardBtn">s</button>
+          <button class="keyboardBtn" >d</button>
+          <button  class="keyboardBtn v">f</button>
+          <button  class="keyboardBtn j">g</button>
+          <button class="keyboardBtn" >h</button>
+          <button class="keyboardBtn q-k">c</button>
+          <button class="keyboardBtn">l</button>
+          <button class="keyboardBtn">x</button>
+          <button class="keyboardBtn p">b</button>
+          <button class="keyboardBtn">n</button>
+          <button class="keyboardBtn">m</button>
+          <button class="keyboardBtn">;</button>
+          <button class="keyboardBtn">'</button>
+          <button class="keyboardBtn">,</button>
+          <button class="keyboardBtn">.</button>
+          <button class="keyboardBtn space-btn"> </button>
+          <button class="shiftBtn">⬆️</button>
+      </div>
+   </div>
+   <div id="ar-head-container" class="ar-head-container">
+    <div id="ar-close-div" class="ar-close-div"><span class="cursor-pointer" id="ar-x-virtualkeyboard">X</span></div>
+    <div class="ar-keyboard-container">
+        <!-- <button>`</button>
+        <button>1</button>
+        <button>2</button>
+        <button>3</button>
+        <button>4</button>
+        <button>5</button>
+        <button>6</button>
+        <button>7</button>
+        <button>8</button>
+        <button>9</button>
+        <button>0</button>
+        <button>-</button>
+        <button>=</button>
+        <button>␡</button> -->
+        <div class="numbers">
+            <button>%</button>
+            <button>#</button>
+            <button>١</button>
+            <button>٢</button>
+            <button>٣</button>
+            <button>٤</button>
+            <button>٥</button>
+            <button>٦</button>
+            <button>٧</button>
+            <button>٨</button>
+            <button>٩</button>
+            <button>٠</button>
+            <button>-</button>
+            <button>_</button>
+
+        </div>
+        <div class="ar-zero-row">
+            <button class="ar-keyboardBtn thirty-px ar-vowle shad">ّ</button>
+            <button class="ar-keyboardBtn thirty-px ar-vowle skon">ْ</button>
+            <button class="ar-keyboardBtn thirty-px ar-vowle dam">ُ</button>
+            <button class="ar-keyboardBtn thirty-px ar-vowle ksr-n">ٍ</button>
+            <button class="ar-keyboardBtn thirty-px ar-vowle ksr">ِ</button>
+            <button class="ar-keyboardBtn thirty-px ar-vowle fath-n">ً</button>
+            <button class="ar-keyboardBtn thirty-px ar-vowle fath">َ</button>
+            <button class="ar-keyboardBtn thirty-px">ء</button>
+            <button class="ar-keyboardBtn thirty-px">ئ</button>
+            <button class="ar-keyboardBtn thirty-px">ؤ</button>
+            <button class="ar-keyboardBtn thirty-px">آ</button>
+            <button class="ar-keyboardBtn thirty-px quran-a">ٰ</button>
+            <button class="ar-keyboardBtn thirty-px">ـ</button>
+        </div>
+        <div class="ar-first-row">
+            <button class="ar-keyboardBtn thirty-px">"</button>
+            <button class="ar-keyboardBtn thirty-px e">(</button>
+            <button class="ar-keyboardBtn thirty-px e">)</button>
+            <button class="ar-keyboardBtn i fortyfour-thirtyseven-round">ص</button>
+            <button class="ar-keyboardBtn z fortyfour-thirtyseven-round">ڡ</button>
+            <button class="ar-keyboardBtn fortyfour-thirtyseven-round">ع</button>
+            <button class="ar-keyboardBtn w-u fortyfour-thirtyseven-round">ه</button>
+            <button class="ar-keyboardBtn e fortyfour-thirtyseven-round">ح</button>
+            <button class="ar-keyboardBtn thirty-px e">{</button>
+            <button class="ar-keyboardBtn thirty-px e">}</button>
+        </div>
+        <div class="ar-second-row">
+            <button class="ar-keyboardBtn fortyfour-thirtyseven-round">ـسـ</button>
+            <button class="ar-keyboardBtn fortyfour-thirtyseven-round" >ى</button>
+            <button class="ar-keyboardBtn v fortyfour-thirtyseven-round">ل</button>
+            <button class="ar-keyboardBtn j fortyfour-thirtyseven-round">ا</button>
+            <button class="ar-keyboardBtn fortyfour-thirtyseven-round" >ٮ</button>
+            <button class="ar-keyboardBtn q-k fortyfour-thirtyseven-round">م</button>
+            <button class="ar-keyboardBtn fortyfour-thirtyseven-round">ك</button>
+        </div>
+        
+       <div class="ar-third-row">
+        <button class="ar-keyboardBtn thirty-px">:</button>
+        <button class="ar-keyboardBtn thirty-px">;</button>
+        <button class="ar-keyboardBtn thirty-px">،</button>
+
+        <button class="ar-keyboardBtn fortyfour-thirtyseven-round">ط</button>
+        <button class="ar-keyboardBtn p fortyfour-thirtyseven-round">د</button>
+        <button class="ar-keyboardBtn fortyfour-thirtyseven-round">ر</button>
+        <button class="ar-keyboardBtn fortyfour-thirtyseven-round">اِ</button>
+
+        <button class="ar-keyboardBtn fortyfour-thirtyseven-round">و</button>
+        <button class="ar-keyboardBtn thirty-px">.</button>
+        <button class="ar-keyboardBtn thirty-px">؟</button>
+        <!-- <button class="ar-shiftBtn">⬆️</button> -->
+       </div>
+       <div class="ar-forth-row">
+        <button class="ar-keyboardBtn"> </button>
+       </div>
+        
+    </div>
+ </div>
+</body>
+</html>
